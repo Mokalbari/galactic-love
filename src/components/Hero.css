@@ -1,0 +1,64 @@
+
+
+.heroContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 2rem;
+  }
+  
+  .heroAvatar {
+    margin-right: 10px;
+  }
+  
+  .avatar {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 30%;
+    box-shadow: 0 0 20px 10px rgba(214, 16, 16, 0.7);
+  }
+  
+  .heroNameDescription {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .info1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+    margin: 5px 0;
+    background-color: aqua;
+    height: 3rem;
+    width: 20rem;
+  }
+
+  .info2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+    margin: 5px 0;
+    background-color: aqua;
+    height: 1rem;
+    width: 20rem;
+  }
+
+  .info3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+    margin: 5px 0;
+    background-color: aqua;
+    height: 5rem;
+    width: 20rem;
+  }
+
+  @media (max-width: 750px) {
+    .heroContainer {
+      flex-direction: column;
+      align-items: center;
+    } 
+  }
