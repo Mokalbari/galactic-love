@@ -19,7 +19,7 @@
     width: 20vh;
     min-height: 28vh;
     max-height: 28vh;
-    aspect-ratio: 1 / 1;
+    /* aspect-ratio: 1 / 1; */
     /* border-radius: 50%; */
   }
   h3 {
