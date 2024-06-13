@@ -9,6 +9,10 @@ function CardListAPI({ filteredCharacters, onCharacterSelect }) {
           key={character.name}
           image={character.image}
           name={character.name}
+          hairColor={character.hairColor}
+          eyeColor={character.eyeColor}
+          species={character.species}
+          homeworld={character.homeworld}
           onClick={() => onCharacterSelect(character)}
         />
       ))}

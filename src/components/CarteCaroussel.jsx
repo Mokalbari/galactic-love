@@ -9,7 +9,9 @@ const CarteCaroussel = ({
   species,
   homeworld,
   onClick,
+  
 }) => {
+    
   return (
     <div className="carte-caroussel" onClick={onClick} onKeyDown={onClick}>
       <div className="centered-content">
