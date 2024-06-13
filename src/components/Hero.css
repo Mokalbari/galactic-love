@@ -1,0 +1,25 @@
+
+.heroContnaire {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem;
+
+    .heroAvatar {
+
+
+
+    }
+
+    .heroNameDescription {
+        
+
+        .descritpion {
+            margin: 1rem;
+            padding: 1rem;
+
+        }
+    }
+ 
+}
+
+
