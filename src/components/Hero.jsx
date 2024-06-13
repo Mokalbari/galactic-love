@@ -1,9 +1,6 @@
-import "./Hero.css"
+import './Hero.css'
 
-
-
-
-function Hero({ name, homeworld, cybernetics, image }) {
+function Hero({ name = 'Jordan', homeworld = 'Earth', cybernetics, image }) {
   return (
     <section className="heroContainer">
       <div className="heroAvatar">
@@ -15,9 +12,7 @@ function Hero({ name, homeworld, cybernetics, image }) {
         <p className="info3">{cybernetics}</p>
       </div>
     </section>
-  );
+  )
 }
-  
-  export default Hero;
 
-
+export default Hero

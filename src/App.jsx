@@ -24,10 +24,12 @@ function App() {
 
   return (
     <>
-      <Header />
-      <Menu />
-      <Hero />
-      <CardListAPI character={character} />
+      <div className="grid">
+        <Header />
+        <Menu />
+        <Hero />
+        <CardListAPI character={character} />
+      </div>
     </>
   )
 }
