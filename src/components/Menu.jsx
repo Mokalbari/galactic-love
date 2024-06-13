@@ -1,4 +1,4 @@
-import './styles/Menu.css';
+import '../styles/Menu.css';
 import React, { useState } from 'react';
 import CardListAPI from './CardListAPI';
 // import data from '../../chickenTab.json';
