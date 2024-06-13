@@ -56,7 +56,7 @@
     width: 20rem;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 750px) {
     .heroContainer {
       flex-direction: column;
       align-items: center;
