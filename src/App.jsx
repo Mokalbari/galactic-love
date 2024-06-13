@@ -1,7 +1,10 @@
 import './App.css'
+import CarteCaroussel from './components/CarteCaroussel'
 
 function App() {
-  return <></>
+  return <>
+  <CarteCaroussel />
+  </>
 }
 
 export default App
