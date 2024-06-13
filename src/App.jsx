@@ -1,10 +1,11 @@
 import './App.css'
-import CardListAPI from './assets/components/CardListAPI'
+import CardListAPI from './components/CardListAPI'
+import Menu from './components/Menu'
 
 function App() {
   return (
     <>
-      <CardListAPI />
+      <Menu />
     </>
   )
 }

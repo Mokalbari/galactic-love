@@ -1,0 +1,51 @@
+:root {
+    margin: 0;
+    padding: 0;
+    --colorGreen:#ccb361 ;
+    --colorOrange:#e99f6f ;
+    --colorPink: #9b4c8f;
+    --colorPinkDarker: #89454e ;
+    --colorMiddleBlue: #114891;
+    --colorBrown: #33240d;
+    --colorWhite: #fcfeff;
+    --colorBlueDark: #262c8b;
+    --colorBlueLight:#508dd7 ;
+    --colorOrangeDark: #b36f35;
+}
+
+.menu {
+    width: 20vh;
+    height: 100vh;
+    background-color: var(--colorMiddleBlue);
+    border-top-right-radius: 3vh;
+    box-shadow: grey 2px 2px 2px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap:2vh;
+
+    h2 {
+        font-size: 4vh;
+    }
+
+    .filters-selector{
+
+        
+        .gender {
+
+        }
+        .species{
+
+        }
+        .age{
+
+        }
+        .affiliations{
+
+        }
+        .homeworld{
+
+        }
+    }
+
+}
