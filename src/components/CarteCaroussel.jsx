@@ -1,9 +1,9 @@
 import jabba from "../assets/Jabba-The-Hutt.png"
 import "../styles/CarteCaroussel.css"
 
-const CarteCaroussel = ({image, name,hairColor,eyeColor,species,homeworld}) =>{
+const CarteCaroussel = ({image, name,hairColor,eyeColor,species,homeworld, onClick}) =>{
     return(
-        <div className="carte-caroussel">
+        <div className="carte-caroussel" onClick={onClick} onKeyDown={onClick}> 
       <div className="centered-content">
         <img src={image} alt={name} />
         <div title="Like" className="heart-container">
@@ -53,6 +53,8 @@ const CarteCaroussel = ({image, name,hairColor,eyeColor,species,homeworld}) =>{
       </div>
     </div>
     )
-}
+  }
 
 export default CarteCaroussel
+
+
