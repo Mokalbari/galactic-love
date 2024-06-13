@@ -17,6 +17,7 @@
 
 .carte-caroussel{
     z-index: 1;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -71,6 +72,7 @@
 
 .carte-caroussel:hover{
 box-shadow: 2px 3px 17px 10px rgba(0, 250, 167);
+
     .centered-content{
         background-color: #292724;
     }
@@ -117,6 +119,8 @@ box-shadow: 2px 3px 17px 10px rgba(0, 250, 167);
         padding-right: 0.5vh;
         cursor: pointer;
         z-index: 2;
+        width: 4vh;
+        height: 3vh;
     }
     
     .search {
@@ -125,7 +129,8 @@ box-shadow: 2px 3px 17px 10px rgba(0, 250, 167);
         padding-right: 0.5vh;
         cursor: pointer;
         z-index: 2;
-    
+        width: 4vh;
+        height: 3vh;
     }
 }
 
