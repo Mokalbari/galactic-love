@@ -1,18 +1,15 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import CarteCaroussel from './CarteCaroussel'
+import "../styles/CardListApi.css"
 
-function CardListAPI() {
-  useEffect(() => {
-    const fetchAPI = async () => {
-      const response = await fetch(
-        'https://miadil.github.io/starwars-api/api/all.json',
-      )
-      const data = await response.json()
-      console.log(data)
-    }
-    fetchAPI()
-  }, [])
+function CardListAPI({character}) {
+  
 
-  return <div>Coucou</div>
+  return (<div className='carte-liste'>
+    {character.map(element =>
+      <CarteCaroussel key={element.id} {...element} />
+    )}
+  </div>)
 }
 
 export default CardListAPI
