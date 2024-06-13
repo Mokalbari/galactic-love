@@ -14,7 +14,7 @@
 }
 
 .menu {
-    width: 20vh;
+    width: 25vh;
     height: 100vh;
     background-color: var(--colorMiddleBlue);
     border-top-right-radius: 3vh;
@@ -22,16 +22,23 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap:2vh;
+    gap:5vh;
+    
 
     h2 {
         font-size: 4vh;
+        color : white;
     }
 
     .filters-selector{
+       padding:2vh;
 
-        
-        .gender {
+       .cform {
+        width: 20vh;
+        border-radius: 1vh;
+       }
+
+        /* .gender {
 
         }
         .species{
@@ -43,9 +50,16 @@
         .affiliations{
 
         }
-        .homeworld{
+        .homeWorld{
 
-        }
+        } */
+    }
+
+}
+
+@media screen and (max-width: 750px) {
+    .menu{
+        display:none;
     }
 
 }
