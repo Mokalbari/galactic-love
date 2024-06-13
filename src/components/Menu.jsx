@@ -1,12 +1,20 @@
-import './styles/Menu.css'
+import '../styles/Menu.css'
 import React from 'react'
+import CardListAPI from './CardListAPI'
 
-function Menu({ character = [] }) {
+function Menu({
+  setFilterGender,
+  setFilterSpecies,
+  setFilterHomeworld,
+  setFilterCybernetics,
+  setFilterAffiliations,
+  filteredCharacters = [],
+}) {
   const getUniqueValues = key => {
     return [
       ...new Set(
-        character
-          .map(character => character[key])
+        filteredCharacters
+          .map(filteredCharacters => filteredCharacters[key])
           .filter(value => value)
           .flat(),
       ),
@@ -23,15 +31,38 @@ function Menu({ character = [] }) {
       <h2>Menu</h2>
       <section className="filters-selector">
         <div className="cform gender">
-          <input type="radio" name="gender" id="option-one1" />
+          <input
+            onChange={e => setFilterGender(e.target.value)}
+            value="male"
+            type="radio"
+            name="gender"
+            id="option-one1"
+          />
           <label for="option-one1">Male</label>
-          <input type="radio" name="gender" id="option-two2" />
+          <input
+            onChange={e => setFilterGender(e.target.value)}
+            type="radio"
+            name="gender"
+            id="option-two2"
+            value="female"
+          />
           <label for="option-two2">Female</label>
           <input type="radio" name="gender" id="option-one3" />
-          <label for="option-one3">All</label>
+          <label
+            onChange={e => setFilterGender(e.target.value)}
+            for="option-one3"
+          >
+            All
+          </label>
         </div>
+
         <div className="affiliations">
-          <select className="cform" name="" id="affiliations">
+          <select
+            onChange={e => setFilterAffiliations(e.target.value)}
+            className="cform"
+            name=""
+            id="id"
+          >
             <option value="affiliations">Affiliations</option>
             {affiliations.map((affiliation, index) => (
               <option key={index} value={affiliation}>
@@ -40,9 +71,15 @@ function Menu({ character = [] }) {
             ))}
           </select>
         </div>
-        .
+
         <div className="species">
-          <select className="cform" name="" id="species" multiple>
+          <select
+            onChange={e => setFilterSpecies(e.target.value)}
+            className="cform"
+            name=""
+            id=""
+            multiple
+          >
             {species.map((specie, index) => (
               <option key={index} value={specie}>
                 {specie}
@@ -50,12 +87,14 @@ function Menu({ character = [] }) {
             ))}
           </select>
         </div>
-        <div className="age">
-          <option value="Age">Age</option>
-          <input type="range" className="cform age" />
-        </div>
+
         <div className="homeWorld">
-          <select className="cform" name="" id="homeWorld">
+          <select
+            onChange={e => setFilterHomeworld(e.target.value)}
+            className="cform"
+            name=""
+            id="id"
+          >
             <option value="homeWorlds">Planète</option>
             {homeWorlds.map((homeWorld, index) => (
               <option key={index} value={homeWorld}>
@@ -64,12 +103,17 @@ function Menu({ character = [] }) {
             ))}
           </select>
         </div>
+
         <div className="cybernetics">
-          <select className="cform" name="" id="cybernetics">
-            <option value="cybernetics">Cybernetics</option>
-            {cybernetics.map((cybernetic, index) => (
-              <option key={index} value={cybernetic}>
-                {cybernetic}
+          <select
+            className="cform"
+            name=""
+            id="id"
+            onChange={e => setFilterCybernetics(e.target.value)}
+          >
+            {homeWorlds.map((homeWorld, index) => (
+              <option key={index} value={homeWorld}>
+                {homeWorld}
               </option>
             ))}
           </select>

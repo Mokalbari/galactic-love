@@ -1,8 +1,6 @@
 import "./Hero.css"
 
 
-
-
 function Hero({ name, homeworld, cybernetics, image }) {
   return (
     <section className="heroContainer">
