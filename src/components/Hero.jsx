@@ -2,25 +2,21 @@ import "./Hero.css"
 
 
 
-function Hero() {
-    return (
-      <section className="heroContnaire">
-        <div className="heroAvatar">
-            <p>test</p>
-            <img 
-            className="avatar" 
-            alt=""
-            src=""
-            />
-        </div>
-        <div className="heroNameDescription">
-            <p className="descritpion">NOM</p>
-            <p className="descritpion">Description1</p>
-            <p className="descritpion">Description2</p>
-        </div>
+
+function Hero({ name, homeworld, cybernetics, image }) {
+  return (
+    <section className="heroContainer">
+      <div className="heroAvatar">
+        <img className="avatar" alt={name} src={image} />
+      </div>
+      <div className="heroNameInfo">
+        <h1 className="info1">{name}</h1>
+        <p className="info2">{homeworld}</p>
+        <p className="info3">{cybernetics}</p>
+      </div>
     </section>
-    );
-  }
+  );
+}
   
   export default Hero;
 
