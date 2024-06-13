@@ -1,0 +1,14 @@
+:root {
+    margin: 0;
+    padding: 0;
+    --colorGreen:#ccb361 ;
+    --colorOrange:#e99f6f ;
+    --colorPink: #9b4c8f;
+    --colorPinkDarker: #89454e ;
+    --colorMiddleBlue: #114891;
+    --colorBrown: #33240d;
+    --colorWhite: #fcfeff;
+    --colorBlueDark: #262c8b;
+    --colorBlueLight:#508dd7 ;
+    --colorOrangeDark: #b36f35;
+}
