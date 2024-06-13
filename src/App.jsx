@@ -9,6 +9,12 @@ import { useEffect, useState } from 'react'
 
 function App() {
   const [character, setCharacter] = useState([])
+  const [filter, setFilter] = useState({
+    gender: '',
+    species: '',
+    homeworld: '',
+    cybernetics: '',
+  })
 
   useEffect(() => {
     const fetchAPI = async () => {
@@ -22,12 +28,13 @@ function App() {
     fetchAPI()
   }, [])
 
+  console.log(filter)
   return (
     <>
       <Header />
-      <Menu />
+      <Menu setFilter={setFilter} />
       <Hero />
-      <CardListAPI character={character} />
+      <CardListAPI filter={filter} character={character} />
     </>
   )
 }
