@@ -8,13 +8,13 @@ function Menu({
   setFilterHomeworld,
   setFilterCybernetics,
   setFilterAffiliations,
-  character = [],
+  filteredCharacters = [],
 }) {
   const getUniqueValues = key => {
     return [
       ...new Set(
-        character
-          .map(character => character[key])
+        filteredCharacters
+          .map(filteredCharacters => filteredCharacters[key])
           .filter(value => value)
           .flat(),
       ),
