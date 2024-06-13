@@ -66,3 +66,26 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+
+/* *************** */
+/* UTILITY CLASSES */
+/* *************** */
+
+.flex-row {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+/* Il est possible de modifier la taille du container en fonction du design */
+.container {
+  width: 80%;
+  max-width: 1000px;
+}
