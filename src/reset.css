@@ -31,7 +31,10 @@ p,
 figure,
 blockquote,
 dl,
-dd {
+dd,
+ul,
+ol,
+li {
   margin: 0;
 }
 
