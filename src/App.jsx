@@ -69,27 +69,29 @@ function App() {
 
   return (
     <>
-      <Header />
-      <Menu
-        filteredCharacters={filteredCharacters}
-        setFilterGender={setFilterGender}
-        setFilterSpecies={setFilterSpecies}
-        setFilterHomeworld={setFilterHomeworld}
-        setFilterCybernetics={setFilterCybernetics}
-        setFilterAffiliations={setFilterAffiliations}
-      />
-      {selectedCharacter && (
-        <Hero
-          name={selectedCharacter.name}
-          homeworld={selectedCharacter.homeworld}
-          cybernetics={selectedCharacter.cybernetics}
-          image={selectedCharacter.image}
+      <div className="grid">
+        <Header />
+        <Menu
+          filteredCharacters={filteredCharacters}
+          setFilterGender={setFilterGender}
+          setFilterSpecies={setFilterSpecies}
+          setFilterHomeworld={setFilterHomeworld}
+          setFilterCybernetics={setFilterCybernetics}
+          setFilterAffiliations={setFilterAffiliations}
         />
-      )}
-      <CardListAPI
-        filteredCharacters={filteredCharacters}
-        onCharacterSelect={handleCharacterSelect}
-      />
+        {selectedCharacter && (
+          <Hero
+            name={selectedCharacter.name}
+            homeworld={selectedCharacter.homeworld}
+            cybernetics={selectedCharacter.cybernetics}
+            image={selectedCharacter.image}
+          />
+        )}
+        <CardListAPI
+          filteredCharacters={filteredCharacters}
+          onCharacterSelect={handleCharacterSelect}
+        />
+      </div>
     </>
   )
 }

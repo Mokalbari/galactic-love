@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './Header.css'
+import '../styles/Header.css'
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const toggleMenu = () => {
@@ -7,15 +7,15 @@ function Header() {
   }
   return (
     <header className="header">
-      <div className="header-content">
-        <h1 className="title">La Cantina de Jaba</h1>
-        <div
+      <div className="header-content container">
+        <h1 className="header__title">La Cantina de Jaba</h1>
+        {/* <div
           className="burger-icon"
           onClick={toggleMenu}
           onKeyDown={toggleMenu}
-        />
+        /> */}
       </div>
-      {menuOpen && <BurgerMenu filter={''} />}
+      {/* {menuOpen && <BurgerMenu filter={''} />} */}
     </header>
   )
 }

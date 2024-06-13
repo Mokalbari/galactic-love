@@ -1,0 +1,22 @@
+.hero {
+  background-color: lightgrey;
+  border-radius: 1rem;
+  grid-area: hero;
+  margin-block: 5vh;
+}
+
+img {
+  max-height: 250px;
+  width: 50%;
+  gap: 1rem;
+  height: auto;
+  align-self: flex-start;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 2rem;
+}
