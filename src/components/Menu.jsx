@@ -1,7 +1,6 @@
-import './styles/Menu.css'
-import React, { useState } from 'react'
+import '../styles/Menu.css'
+import React from 'react'
 import CardListAPI from './CardListAPI'
-// import data from '../../chickenTab.json';
 
 function Menu({
   setFilterGender,
@@ -9,7 +8,24 @@ function Menu({
   setFilterHomeworld,
   setFilterCybernetics,
   setFilterAffiliations,
+  character = [],
 }) {
+  const getUniqueValues = key => {
+    return [
+      ...new Set(
+        character
+          .map(character => character[key])
+          .filter(value => value)
+          .flat(),
+      ),
+    ]
+  }
+
+  const affiliations = getUniqueValues('affiliations')
+  const species = getUniqueValues('species')
+  const homeWorlds = getUniqueValues('homeworld')
+  const cybernetics = getUniqueValues('cybernetics')
+
   return (
     <div className="menu">
       <h2>Menu</h2>
@@ -48,7 +64,11 @@ function Menu({
             id="id"
           >
             <option value="affiliations">Affiliations</option>
-            <option value="select">select 1</option>
+            {affiliations.map((affiliation, index) => (
+              <option key={index} value={affiliation}>
+                {affiliation}
+              </option>
+            ))}
           </select>
         </div>
 
@@ -60,8 +80,11 @@ function Menu({
             id=""
             multiple
           >
-            <option value="human">Human</option>
-            <option value="droid">Droid</option>
+            {species.map((specie, index) => (
+              <option key={index} value={specie}>
+                {specie}
+              </option>
+            ))}
           </select>
         </div>
 
@@ -73,7 +96,11 @@ function Menu({
             id="id"
           >
             <option value="homeWorlds">Planète</option>
-            <option value="select">select 1</option>
+            {homeWorlds.map((homeWorld, index) => (
+              <option key={index} value={homeWorld}>
+                {homeWorld}
+              </option>
+            ))}
           </select>
         </div>
 
@@ -84,8 +111,11 @@ function Menu({
             id="id"
             onChange={e => setFilterCybernetics(e.target.value)}
           >
-            <option value="cybernetics">Cybernetics</option>
-            <option value="select">select 1</option>
+            {homeWorlds.map((homeWorld, index) => (
+              <option key={index} value={homeWorld}>
+                {homeWorld}
+              </option>
+            ))}
           </select>
         </div>
       </section>

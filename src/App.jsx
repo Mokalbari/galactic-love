@@ -8,7 +8,9 @@ import Hero from './components/Hero'
 import { useEffect, useState } from 'react'
 import { element } from 'prop-types'
 
+
 function App() {
+<<<<<<< HEAD
   const [character, setCharacter] = useState([])
   const [filterGender, setFilterGender] = useState('')
   const [filterSpecies, setFilterSpecies] = useState('')
@@ -22,6 +24,15 @@ function App() {
   //   homeworld: '',
   //   cybernetics: '',
   // }
+=======
+  const [characters, setCharacters] = useState([])
+  const [selectedCharacter, setSelectedCharacter] = useState({
+    name: "Default Name",
+    homeworld: "Default ",
+    cybernetics: "Default ",
+    image: "https://w7.pngwing.com/pngs/116/192/png-transparent-jabba-the-hutt-c-3po-sideshow-collectibles-youtube-star-wars-youtube-war-villain-16-scale-modeling-thumbnail.png" 
+  });
+>>>>>>> dev
 
   useEffect(() => {
     const fetchAPI = async () => {
@@ -30,11 +41,12 @@ function App() {
       )
       const data = await response.json()
       console.log(data)
-      setCharacter(data)
+      setCharacters(data)
     }
     fetchAPI()
   }, [])
 
+<<<<<<< HEAD
   const filters = {
     gender: filterGender,
     homeworld: filterHomeworld,
@@ -106,8 +118,28 @@ function App() {
       />
       <Hero />
       <CardListAPI filteredCharacters={filteredCharacters} />
+=======
+  const handleCharacterSelect = (character) => {
+    setSelectedCharacter(character)
+  }
+
+  return (
+    <>
+      <Header />
+      <Menu />
+      {selectedCharacter && (
+        <Hero
+          name={selectedCharacter.name}
+          homeworld={selectedCharacter.homeworld}
+          cybernetics={selectedCharacter.cybernetics}
+          image={selectedCharacter.image}
+        />
+      )}
+      <CardListAPI characters={characters} onCharacterSelect={handleCharacterSelect} />
+>>>>>>> dev
     </>
   )
 }
+
 
 export default App
