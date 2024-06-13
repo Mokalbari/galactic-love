@@ -26,6 +26,14 @@ function Menu({
   const homeWorlds = getUniqueValues('homeworld')
   const cybernetics = getUniqueValues('cybernetics')
 
+  const handleResetButton = () => {
+    setFilterGender('')
+    setFilterAffiliations('')
+    setFilterCybernetics('')
+    setFilterHomeworld('')
+    setFilterSpecies('')
+  }
+
   return (
     <div className="menu">
       <h2>Menu</h2>
@@ -111,14 +119,18 @@ function Menu({
             id="id"
             onChange={e => setFilterCybernetics(e.target.value)}
           >
-            {homeWorlds.map((homeWorld, index) => (
-              <option key={index} value={homeWorld}>
-                {homeWorld}
+            {cybernetics.map((cybernetics, index) => (
+              <option key={index} value={cybernetics}>
+                {cybernetics}
               </option>
             ))}
           </select>
         </div>
       </section>
+
+      <button type="button" onClick={handleResetButton}>
+        reset filters
+      </button>
     </div>
   )
 }
