@@ -13,10 +13,11 @@
     --colorBlueLight:#508dd7 ;
     --colorOrangeDark: #b36f35;
     --fontTitle: "Orbitron", sans-serif;
+    --fontText: "Montserrat", sans-serif;
 }
 
 .carte-caroussel{
-
+    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -33,6 +34,7 @@
     transition: .5s;
     background-color: #292724;
     gap:1.5vh;
+    position: relative;
 
     img{
         object-fit: contain;
@@ -53,40 +55,80 @@
     p{
         font-weight: 600;
         text-align: center;
+        
     }
     ul{
         padding: 0;
-        margin: 2vh;
+        width: 25vh;
 
         li{
-            padding-left: -40px;
             margin: 2vh;
             text-align: center;
+            color: var(--colorWhite);
+            font-family: var(--fontText);
         }
     }
-    
-    .Wrapper{
-        overflow: hidden;
-        position: relative;
-    }
 
-    #affiliation{
-        position: relative;
-        bottom: -100px;
-    }
 }
 
 .carte-caroussel:hover{
 box-shadow: 2px 3px 17px 10px rgba(0, 250, 167);
-
+    .centered-content{
+        background-color: #292724;
+    }
+    .wrapper {
+        opacity: 1;
+        visibility: visible;
+        background-color: rgba(27, 31, 21, 0.8)
+    
+    }
 }
+
+.wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s, visibility 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+}
+
+#affiliation {
+    position: relative;
+}
+
 
 
 /* Like */
 
 .centered-content {
     display: flex;
-    align-items: center;
+    margin-top: 0.5vh;
+
+    .sendMessage {
+        margin-top: 2vh;
+        color: rgb(54, 110, 156);
+        padding-right: 0.5vh;
+        cursor: pointer;
+        z-index: 2;
+    }
+    
+    .search {
+        margin-top: 1vh;
+        color: rgb(107, 56, 141);
+        padding-right: 0.5vh;
+        cursor: pointer;
+        z-index: 2;
+    
+    }
 }
 
 .heart-container {
@@ -95,6 +137,7 @@ box-shadow: 2px 3px 17px 10px rgba(0, 250, 167);
   width: 3vh;
   height: 3vh;
   transition: .3s;
+  z-index: 2;
 }
 
 .heart-container .checkbox {
@@ -174,3 +217,4 @@ box-shadow: 2px 3px 17px 10px rgba(0, 250, 167);
     display: none;
   }
 }
+
