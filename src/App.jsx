@@ -1,5 +1,5 @@
 import './App.css'
-import CardListAPI from './assets/components/CardListAPI'
+import CardListAPI from './components/CardListAPI'
 
 function App() {
   return (

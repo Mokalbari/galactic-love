@@ -1,7 +1,9 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import CarteCaroussel from './CarteCaroussel'
 
 function CardListAPI() {
+  const [character, setCharacter] = useState([])
+
   useEffect(() => {
     const fetchAPI = async () => {
       const response = await fetch(
@@ -9,13 +11,14 @@ function CardListAPI() {
       )
       const data = await response.json()
       console.log(data)
+      setCharacter(data)
     }
     fetchAPI()
   }, [])
 
   return (<div>
-    {data.map(element =>
-      <CarteCaroussel key={data.id} {...data} />
+    {character.map(element =>
+      <CarteCaroussel key={element.id} {...element} />
     )}
   </div>)
 }
