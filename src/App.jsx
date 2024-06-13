@@ -1,10 +1,12 @@
 import './App.css'
-import CarteCaroussel from './components/CarteCaroussel'
+import CardListAPI from './assets/components/CardListAPI'
 
 function App() {
-  return <>
-  <CarteCaroussel />
-  </>
+  return (
+    <>
+      <CardListAPI />
+    </>
+  )
 }
 
 export default App
