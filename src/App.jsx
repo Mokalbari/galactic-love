@@ -25,7 +25,7 @@ function App() {
   return (
     <>
       <Header />
-      <Menu />
+      <Menu character={character}/>
       <Hero />
       <CardListAPI character={character} />
     </>
