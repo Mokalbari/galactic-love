@@ -1,7 +1,11 @@
 import './App.css'
-import { useEffect, useState } from 'react'
+
+import Header from './components/Header'
 import CardListAPI from './components/CardListAPI'
+import BurgerMenu from './components/BurgerMenu'
 import Menu from './components/Menu'
+import Hero from './components/Hero'
+import { useEffect, useState } from 'react'
 
 function App() {
   const [character, setCharacter] = useState([])
@@ -20,8 +24,10 @@ function App() {
 
   return (
     <>
+      <Header />
       <Menu character={character}/>
-      <CardListAPI character={character}/>
+      <Hero />
+      <CardListAPI character={character} />
     </>
   )
 }
