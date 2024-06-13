@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react'
 import CarteCaroussel from './CarteCaroussel'
 import "../styles/CardListApi.css"
@@ -10,6 +11,6 @@ function CardListAPI({character}) {
       <CarteCaroussel key={element.id} {...element} />
     )}
   </div>)
-}
+
 
 export default CardListAPI
