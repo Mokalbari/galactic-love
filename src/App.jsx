@@ -1,10 +1,10 @@
 import './App.css'
-import FetchStarwarsAPI from './assets/components/FetchStarwarsAPI'
+import CardListAPI from './assets/components/CardListAPI'
 
 function App() {
   return (
     <>
-      <FetchStarwarsAPI />
+      <CardListAPI />
     </>
   )
 }

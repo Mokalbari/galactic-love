@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-function FetchStarwarsAPI() {
+function CardListAPI() {
   useEffect(() => {
     const fetchAPI = async () => {
       const response = await fetch(
@@ -15,4 +15,4 @@ function FetchStarwarsAPI() {
   return <div>Coucou</div>
 }
 
-export default FetchStarwarsAPI
+export default CardListAPI
