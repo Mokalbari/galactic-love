@@ -1,92 +1,99 @@
-
 :root {
-    margin: 0;
-    padding: 0;
-    --colorGreen:#ccb361 ;
-    --colorOrange:#e99f6f ;
-    --colorPink: #9b4c8f;
-    --colorPinkDarker: #89454e ;
-    --colorMiddleBlue: #114891;
-    --colorBrown: #33240d;
-    --colorWhite: #fcfeff;
-    --colorBlueDark: #262c8b;
-    --colorBlueLight:#508dd7 ;
-    --colorOrangeDark: #b36f35;
-    --fontTitle: "Orbitron", sans-serif;
+  margin: 0;
+  padding: 0;
+  --colorgreen: #ccb361;
+  --colororange: #e99f6f;
+  --colorpink: #9b4c8f;
+  --colorpinkdarker: #89454e;
+  --colormiddleblue: #114891;
+  --colorbrown: #33240d;
+  --colorwhite: #fcfeff;
+  --colorbluedark: #262c8b;
+  --colorbluelight: #508dd7;
+  --colororangedark: #b36f35;
+  --fonttitle: "Orbitron", sans-serif;
 }
 
-.carte-caroussel{
+.carte-caroussel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 30vh;
+  max-height: 37vh;
+  height: 35vh;
+  padding: 1.5vh;
+  margin: 2vh;
+  border-radius: 5vh;
+  border: 1.5px #5c5a5a solid;
+  box-shadow: 0px 5px 8px #5c5a5a;
+  overflow: hidden;
+  transition: .5s;
+  background-color: #292724;
+  gap: 1.5vh;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 30vh;
-    max-height: 37vh;
-    height: 35vh;
-    padding: 1.5vh;
+  img {
+    object-fit: contain;
     margin: 2vh;
-    border-radius: 5vh;
-    border: 1.5px #5c5a5a solid;
-    box-shadow: 0px 5px 8px #5c5a5a;
-    overflow: hidden;
-    transition: .5s;
-    background-color: #292724;
-    gap:1.5vh;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    filter: drop-shadow(0px 4px 6px rgb(0, 250, 167));
+    /* 0, 137, 250 */
+  }
+  h3 {
+    font-size: 3vh;
+    font-family: var(--fontTitle);
+    color: var(--colorWhite);
+    text-align: center;
+  }
+  p {
+    font-weight: 600;
+    text-align: center;
+  }
+  ul {
+    padding: 0;
+    margin: 2vh;
 
-    img{
-        object-fit: contain;
-        margin: 2vh;
-        width: 20vh ;
-        height: 20vh ;
-        border-radius: 50%;
-        filter: drop-shadow(0px 4px 6px rgb(0, 250, 167));
-        /* 0, 137, 250 */
+    li {
+      padding-left: -40px;
+      margin: .5vh;
+      text-align: center;
     }
-    h3{
-        font-size: 3vh;
-        font-family: var(--fontTitle);
-        color: var(--colorWhite);
-        text-align: center;
+  }
 
-    }
-    p{
-        font-weight: 600;
-        text-align: center;
-    }
-    ul{
-        padding: 0;
-        margin: 2vh;
+  .Wrapper {
+    position: relative;
+  }
 
-        li{
-            padding-left: -40px;
-            margin: 2vh;
-            text-align: center;
-        }
-    }
-    
-    .Wrapper{
-        overflow: hidden;
-        position: relative;
-    }
-
-    #affiliation{
-        position: relative;
-        bottom: -100px;
-    }
+  #affiliation {
+    position: relative;
+    /* bottom: -100px; */
+    bottom: 20px;
+    text-align: center;
+    transition: .5s ease-in-out;
+  }
 }
 
-.carte-caroussel:hover{
-box-shadow: 2px 3px 17px 10px rgba(0, 250, 167);
+.carte-caroussel:hover {
+  box-shadow: 0px 0px 69px 25px rgba(80, 123, 209, 0.74);
 
+  #affiliation {
+    transition: .5s ease-in-out;
+    position: relative;
+    bottom: 100px;
+  }
 }
 
+.carte-caroussel:hover {
+  box-shadow: 2px 3px 17px 10px rgba(0, 250, 167);
+}
 
 /* Like */
 
 .centered-content {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .heart-container {
@@ -115,7 +122,7 @@ box-shadow: 2px 3px 17px 10px rgba(0, 250, 167);
 }
 
 .heart-container .svg-outline,
-        .heart-container .svg-filled {
+.heart-container .svg-filled {
   fill: var(--heart-color);
   position: absolute;
 }
@@ -135,12 +142,12 @@ box-shadow: 2px 3px 17px 10px rgba(0, 250, 167);
   stroke-width: 2px;
 }
 
-.heart-container .checkbox:checked~.svg-container .svg-filled {
-  display: block
+.heart-container .checkbox:checked ~ .svg-container .svg-filled {
+  display: block;
 }
 
-.heart-container .checkbox:checked~.svg-container .svg-celebrate {
-  display: block
+.heart-container .checkbox:checked ~ .svg-container .svg-celebrate {
+  display: block;
 }
 
 @keyframes keyframes-svg-filled {
