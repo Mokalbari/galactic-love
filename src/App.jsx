@@ -1,9 +1,12 @@
 import './App.css'
-import CardListAPI from './assets/components/CardListAPI'
+import Header from './components/Header'
+import CardListAPI from './components/CardListAPI'
+import BurgerMenu from './components/BurgerMenu'
 
 function App() {
   return (
     <>
+      <Header /> 
       <CardListAPI />
     </>
   )
