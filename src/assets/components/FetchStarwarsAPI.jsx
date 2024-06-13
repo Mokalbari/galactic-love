@@ -12,7 +12,7 @@ function FetchStarwarsAPI() {
     fetchAPI()
   }, [])
 
-  return <div></div>
+  return <div>Coucou</div>
 }
 
 export default FetchStarwarsAPI
