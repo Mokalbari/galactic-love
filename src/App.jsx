@@ -67,31 +67,7 @@ function App() {
   character.forEach(element => filterFunk(element))
   console.log(filteredCharacters)
 
-  return (
-    <>
-      <Header />
-      <Menu
-        filteredCharacters={filteredCharacters}
-        setFilterGender={setFilterGender}
-        setFilterSpecies={setFilterSpecies}
-        setFilterHomeworld={setFilterHomeworld}
-        setFilterCybernetics={setFilterCybernetics}
-        setFilterAffiliations={setFilterAffiliations}
-      />
-      {selectedCharacter && (
-        <Hero
-          name={selectedCharacter.name}
-          homeworld={selectedCharacter.homeworld}
-          cybernetics={selectedCharacter.cybernetics}
-          image={selectedCharacter.image}
-        />
-      )}
-      <CardListAPI
-        filteredCharacters={filteredCharacters}
-        onCharacterSelect={handleCharacterSelect}
-      />
-    </>
-  )
+  return <></>
 }
 
 export default App
