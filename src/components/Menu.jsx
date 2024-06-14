@@ -4,7 +4,7 @@ import { useState } from 'react'
 import CardListAPI from './CardListAPI'
 
 function Menu({
-  src,
+  audio,
   setFilterGender,
   setFilterSpecies,
   setFilterHomeworld,
@@ -49,7 +49,9 @@ function Menu({
 
   return (
     <div className="menu flex-column">
-      <h2 contenteditable spellcheck="false">Open</h2>
+      <h2 contenteditable spellcheck="false">
+        Open
+      </h2>
       <section className="filters-selector">
         <div className="cform gender flex-row">
           <div className="flex-row">
@@ -152,11 +154,15 @@ function Menu({
         </div>
       </section>
 
-      <button className="reset-button" type="button" onClick={handleResetButton}>
+      <button
+        className="reset-button"
+        type="button"
+        onClick={handleResetButton}
+      >
         Reset Filters
       </button>
       <div>
-        <audio id="audio" src={src} loop autoplay/>
+        <audio id="audio" audio={audio} loop autoplay />
         <button
           id="audio-button"
           onClick={togglePlay}
@@ -165,9 +171,7 @@ function Menu({
         >
           {playing ? 'Pause' : 'Play ♬'}
         </button>
-        
       </div>
-      
     </div>
   )
 }
