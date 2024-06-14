@@ -7,6 +7,7 @@ import Menu from './components/Menu'
 import Hero from './components/Hero'
 import { useEffect, useState } from 'react'
 import { element } from 'prop-types'
+import Loading from "./components/Loading"
 
 function App() {
   const [character, setCharacter] = useState([])
@@ -22,6 +23,8 @@ function App() {
   const [filterHomeworld, setFilterHomeworld] = useState('')
   const [filterCybernetics, setFilterCybernetics] = useState('')
   const [filterAffiliations, setFilterAffiliations] = useState('')
+  const [loading, setLoading] = useState(true); // Ajouter l'état de chargement
+
 
   useEffect(() => {
     const fetchAPI = async () => {
@@ -31,12 +34,19 @@ function App() {
       const data = await response.json()
       console.log(data)
       setCharacter(data)
+      setLoading(false); // Arrêter le chargement une fois les données récupérées
     }
-    fetchAPI()
-  }, [])
-  const handleCharacterSelect = character => {
-    setSelectedCharacter(character)
-  }
+    
+    setTimeout(() => {
+      fetchAPI();
+    }, 4000); // Simulez un délai de chargement de 3 secondes
+  }, []);
+
+  const handleCharacterSelect = (character) => {
+    setSelectedCharacter(character);
+  };
+
+
 
   const filters = {
     gender: filterGender,
@@ -65,6 +75,10 @@ function App() {
 
   character.forEach(element => filterFunk(element))
   console.log(filteredCharacters)
+
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <>
