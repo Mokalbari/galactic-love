@@ -6,3 +6,22 @@
 .cards {
   grid-area: cards;
 }
+
+.carousel {
+  display: none;
+}
+
+@media (max-width: 750px) {
+  body {
+    /* background-color: aqua; */
+  }
+  .carte-liste {
+    /* background-color: rgb(251, 255, 0); */
+    display: none;
+  }
+
+  .carousel {
+    display: block;
+    width: 100vw;
+  }
+}
