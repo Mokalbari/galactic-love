@@ -1,0 +1,12 @@
+.message {
+  /* background-color: aqua; */
+  display: flex;
+  align-items: center;
+  min-height: 6rem;
+  padding: 1rem 1.5rem;
+
+  img {
+    max-height: 3.5rem;
+    margin-right: .5rem;
+  }
+}

@@ -7,6 +7,7 @@ import Menu from './components/Menu'
 import Hero from './components/Hero'
 import { useEffect, useState } from 'react'
 import { element } from 'prop-types'
+import Messagerie from './components/Messagerie'
 
 function App() {
   const [character, setCharacter] = useState([])
@@ -67,7 +68,32 @@ function App() {
   character.forEach(element => filterFunk(element))
   console.log(filteredCharacters)
 
-  return <></>
+  return (
+    <>
+      <Header />
+      <Messagerie selectedCharacter={selectedCharacter} />
+      <Menu
+        filteredCharacters={filteredCharacters}
+        setFilterGender={setFilterGender}
+        setFilterSpecies={setFilterSpecies}
+        setFilterHomeworld={setFilterHomeworld}
+        setFilterCybernetics={setFilterCybernetics}
+        setFilterAffiliations={setFilterAffiliations}
+      />
+      {selectedCharacter && (
+        <Hero
+          name={selectedCharacter.name}
+          homeworld={selectedCharacter.homeworld}
+          cybernetics={selectedCharacter.cybernetics}
+          image={selectedCharacter.image}
+        />
+      )}
+      <CardListAPI
+        filteredCharacters={filteredCharacters}
+        onCharacterSelect={handleCharacterSelect}
+      />
+    </>
+  )
 }
 
 export default App

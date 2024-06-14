@@ -1,0 +1,65 @@
+.messagerie {
+  border-top-left-radius: .7rem;
+  border-top-right-radius: .7rem;
+  position: absolute;
+  bottom: 0;
+  right: 60px;
+  border: black 1px solid;
+  max-width: 80vw;
+  max-height: 50vh;
+  min-height: 50vh;
+  img {
+    max-width: 3vw;
+    margin: 0;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    /* background-color: bisque; */
+    width: 100%;
+    border-bottom: 1px solid grey;
+  }
+
+  .header__left {
+    img {
+      max-width: 2rem;
+      margin: 0 1rem;
+    }
+    max-height: 4vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    /* background-color: red; */
+    align-items: center;
+  }
+  .header__right {
+    img {
+      margin: 0 .1rem;
+      max-width: 2rem;
+    }
+    justify-content: flex-end;
+    max-height: 4vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* background-color: blue; */
+  }
+
+  .input {
+    background-color: rgb(192, 192, 192);
+    display: flex;
+    max-height: 3rem;
+    margin: 1rem;
+    img {
+      padding: 0.2rem 0;
+      max-height: 2rem;
+    }
+
+    input {
+      background-color: rgb(192, 192, 192);
+      border: none;
+    }
+  }
+}
