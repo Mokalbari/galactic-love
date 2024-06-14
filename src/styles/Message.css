@@ -4,6 +4,9 @@
   align-items: center;
   min-height: 6rem;
   padding: 1rem 1.5rem;
+  .message__name {
+    font-size: 1.7rem;
+  }
 
   img {
     max-height: 3.5rem;

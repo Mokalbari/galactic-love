@@ -71,7 +71,9 @@ function App() {
     }
   }
 
-  character.forEach(element => filterFunk(element))
+  for (const element of character) {
+    filterFunk(element)
+  }
   console.log(filteredCharacters)
 
   if (loading) {
@@ -91,14 +93,14 @@ function App() {
           setFilterCybernetics={setFilterCybernetics}
           setFilterAffiliations={setFilterAffiliations}
         />
-        {selectedCharacter && (
+        {/* {selectedCharacter && (
           <Hero
             name={selectedCharacter.name}
             homeworld={selectedCharacter.homeworld}
             cybernetics={selectedCharacter.cybernetics}
             image={selectedCharacter.image}
           />
-        )}
+        )} */}
         <CardListAPI
           filteredCharacters={filteredCharacters}
           onCharacterSelect={handleCharacterSelect}

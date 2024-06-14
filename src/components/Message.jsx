@@ -1,14 +1,17 @@
 import abdou from '../assets/1558184944803.jpeg'
 import '../styles/Message.css'
 
-const Message = () => {
+const Message = ({ selectedCharacter }) => {
   return (
     <>
       <div className="message">
-        <img src={abdou} alt="" />
+        <img src={selectedCharacter.image} alt="" />
         <div className="message__contenu">
-          <h2>Auteur</h2>
-          <p>coucou ca va moi c'est abdou, j'aime les poulets</p>
+          <h2 className="message__name">{selectedCharacter.name}</h2>
+          <div className="message__contenu__input">
+            <input type="text" />
+            <button type="button">send</button>
+          </div>
         </div>
       </div>
       <hr />
