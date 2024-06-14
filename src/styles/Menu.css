@@ -21,6 +21,14 @@
   --fonttext: "Montserrat", sans-serif;
   --noise: url(https://i.gyazo.com/a26366e538851a5c569ff648e99b7fd4.png);
   --gif-texture: url(https://64.media.tumblr.com/da60c13b478dda09ab90c27e880983b8/tumblr_nd4pwdPKdc1tun3l0o1_1280.gifv);
+  --circle-rainbow: radial-gradient(
+    circle at left top,
+    #ede6bf,
+    #ecc947,
+    #cb5a31,
+    #6f5d79,
+    #4e779a
+  );
 }
 
 .menu {
@@ -77,9 +85,14 @@
   label {
     color: var(--light-color);
   }
+/* 
+  input [type=”radio”] {
+
+    accent-color:rgba(42, 56, 40, 0.5)
+  } */
 
   h2 {
-    margin-block: 6vh;
+    margin-block: 3vh;
     font-family: 'Exo 2', sans-serif;
     font-weight: 200;
     font-style: italic;
@@ -95,9 +108,11 @@
     width: 100%;
     background-image: linear-gradient(
       to right,
-      var(--light-color),
-      var(--light-color)
+      rgba(42, 63, 39, 0.4),
+      rgba(42, 63, 39, 0.5)
     );
+    font-family: var(--fonttext);
+    font-size: 2vh;
   }
 
   input {
@@ -107,6 +122,8 @@
   .gender {
     gap: 0.5rem;
     margin-bottom: 2rem;
+    font-family: var(--fonttext);
+    font-size: 2vh;
   }
 
   .filters-selector {
@@ -117,6 +134,8 @@
       border-radius: 1vh;
       display: flex;
       flex-wrap: wrap;
+      padding: 0.8vh;
+      accent-color: rgba(69, 110, 64, 1);
     }
   }
 
@@ -124,6 +143,38 @@
     color: white;
     margin-block: 1rem;
   }
+
+  #audio-button{
+    height: 3.5vh;
+    width: 8.5vh;
+    font-size: 2vh;
+    background-color:rgba(69, 110, 64, 0.8);
+    color: white;
+    border: none;
+    border-radius: 0 0 2vh 2vh;
+    cursor: pointer;
+    margin-top: 1vh;
+    font-family: var(--fonttext);
+  }
+  #audio-button:hover {
+    background-color: rgba(61, 150, 49, 0.712) ;
+}
+
+  .reset-button{
+    height: 5vh;
+    width: 15vh;
+    font-size: 2vh;
+    background-color:rgba(42, 63, 39, 0.8);
+    color: white;
+    border: none;
+    border-radius: 2vh;
+    cursor: pointer;
+    margin-top: 1vh;
+    font-family: var(--fonttext);
+  }
+  .reset-button:hover {
+    background-color: rgba(69, 110, 64, 0.8) ;
+}
 }
 
 @media screen and (max-width: 750px) {
@@ -167,11 +218,11 @@ h2::selection {
 
 @keyframes flicker {
     
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+  0%, 100% {
     
       text-shadow:
-          -0.2rem -0.2rem 1rem #fff,
-          0.2rem 0.2rem 1rem #fff,
+          -8.2rem -0.2rem 1rem #cc3b3b,
+          0.2rem 0.2rem 1rem #f80000,
           0 0 2rem var(--neon-text-color),
           0 0 4rem var(--neon-text-color),
           0 0 6rem var(--neon-text-color),
@@ -183,12 +234,12 @@ h2::selection {
           inset 0 0 .5rem #fff,
           0 0 2rem var(--neon-border-color),
           inset 0 0 2rem var(--neon-border-color),
-          0 0 4rem var(--neon-border-color),
-          inset 0 0 4rem var(--neon-border-color);        
+          0 0 1rem var(--neon-border-color),
+          inset 0 0 0rem var(--neon-border-color);        
   }
   
-  20%, 24%, 55% {        
+  /* 20%, 24%, 55% {        
       text-shadow: none;
       box-shadow: none;
-  }    
+  }     */
 }

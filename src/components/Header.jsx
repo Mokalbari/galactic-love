@@ -6,7 +6,7 @@ function Header({ src }) {
   return (
     <header className="header">
       <div className="header-content">
-        <div class="logo"><b><span>La</span> <span>Can</span>tina <span>de </span>Ja<span>ba </span></b></div>
+        <div class="logo"><b><span>La</span> <span>Can</span>tina <span>de </span>Ja<span>bba </span></b></div>
       </div>
     </header>
   )

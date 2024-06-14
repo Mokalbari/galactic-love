@@ -152,20 +152,22 @@ function Menu({
         </div>
       </section>
 
-      <button className="reset" type="button" onClick={handleResetButton}>
+      <button className="reset-button" type="button" onClick={handleResetButton}>
         Reset Filters
       </button>
       <div>
-        <audio id="audio" src={src} />
+        <audio id="audio" src={src} loop autoplay/>
         <button
-          id="truc"
+          id="audio-button"
           onClick={togglePlay}
           onKeyDown={togglePlay}
           type="button"
         >
-          {playing ? 'Pause' : 'Play'}
+          {playing ? 'Pause' : 'Play ♬'}
         </button>
+        
       </div>
+      
     </div>
   )
 }
