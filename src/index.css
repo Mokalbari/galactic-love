@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-
+:root {
+  --noise: url(https://i.gyazo.com/a26366e538851a5c569ff648e99b7fd4.png);
+}
 /* *************** */
 /* UTILITY CLASSES */
 /* *************** */
@@ -30,4 +32,13 @@
   display: grid;
   grid-template-areas: "menu header" "menu hero" "menu cards";
   grid-template-rows: 40vh 40vh auto;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background-color: #191f1d;
+  background-image: var(--noise);
+  background-blend-mode: overlay;
+  color: #ece0c8;
 }

@@ -1,4 +1,9 @@
+:root {
+  --noise: url(https://i.gyazo.com/a26366e538851a5c569ff648e99b7fd4.png);
+}
+
 .hero {
+  outline: 1px solid red;
   background-color: lightgrey;
   border-radius: 1rem;
   grid-area: hero;

@@ -139,8 +139,8 @@ function Menu({
         </div>
       </section>
 
-      <button type="button" onClick={handleResetButton}>
-        reset filters
+      <button className="reset" type="button" onClick={handleResetButton}>
+        Reset Filters
       </button>
     </div>
   )
