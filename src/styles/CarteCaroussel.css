@@ -16,7 +16,6 @@
 }
 
 .carte-caroussel {
-  outline: px solid red;
   z-index: 1;
   position: relative;
   display: flex;
@@ -66,6 +65,11 @@ ul {
     color: var(--colorWhite);
     font-family: var(--fontText);
   }
+}
+.centered-content {
+  display: flex;
+  margin-top: 0.5vh;
+  justify-content: flex-end;
 }
 
 .carte-caroussel:hover {
@@ -136,6 +140,7 @@ ul {
   height: 3vh;
   transition: .3s;
   z-index: 2;
+  margin-left: 2vh;
 }
 
 .heart-container .checkbox {
