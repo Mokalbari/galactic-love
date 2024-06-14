@@ -1,8 +1,10 @@
 import '../styles/Menu.css'
 import React from 'react'
+import { useState } from 'react'
 import CardListAPI from './CardListAPI'
 
 function Menu({
+  src,
   setFilterGender,
   setFilterSpecies,
   setFilterHomeworld,
@@ -32,6 +34,17 @@ function Menu({
     setFilterCybernetics('')
     setFilterHomeworld('')
     setFilterSpecies('')
+  }
+
+  const [playing, setPlaying] = useState(false)
+  const togglePlay = () => {
+    const audio = document.getElementById('audio')
+    if (playing) {
+      audio.pause()
+    } else {
+      audio.play()
+    }
+    setPlaying(!playing)
   }
 
   return (
@@ -142,6 +155,17 @@ function Menu({
       <button className="reset" type="button" onClick={handleResetButton}>
         Reset Filters
       </button>
+      <div>
+        <audio id="audio" src={src} />
+        <button
+          id="truc"
+          onClick={togglePlay}
+          onKeyDown={togglePlay}
+          type="button"
+        >
+          {playing ? 'Pause' : 'Play'}
+        </button>
+      </div>
     </div>
   )
 }
