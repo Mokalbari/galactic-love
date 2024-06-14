@@ -162,7 +162,7 @@ function Menu({
         Reset Filters
       </button>
       <div>
-        <audio id="audio" audio={audio} loop autoplay />
+        <audio id="audio" src={audio} loop autoplay />
         <button
           id="audio-button"
           onClick={togglePlay}
