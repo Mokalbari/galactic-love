@@ -49,7 +49,7 @@ function Menu({
 
   return (
     <div className="menu flex-column">
-      <h2>Menu</h2>
+      <h2 contenteditable spellcheck="false">Open</h2>
       <section className="filters-selector">
         <div className="cform gender flex-row">
           <div className="flex-row">
@@ -152,20 +152,22 @@ function Menu({
         </div>
       </section>
 
-      <button className="reset" type="button" onClick={handleResetButton}>
+      <button className="reset-button" type="button" onClick={handleResetButton}>
         Reset Filters
       </button>
       <div>
-        <audio id="audio" src={src} />
+        <audio id="audio" src={src} loop autoplay/>
         <button
-          id="truc"
+          id="audio-button"
           onClick={togglePlay}
           onKeyDown={togglePlay}
           type="button"
         >
-          {playing ? 'Pause' : 'Play'}
+          {playing ? 'Pause' : 'Play ♬'}
         </button>
+        
       </div>
+      
     </div>
   )
 }

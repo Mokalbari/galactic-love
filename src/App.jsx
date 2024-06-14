@@ -1,5 +1,5 @@
 import './App.css'
-import jaba from './assets/Jabba-The-Hutt.png'
+import jabba from './assets/Jabba-The-Hutt.png'
 import Header from './components/Header'
 import CardListAPI from './components/CardListAPI'
 import BurgerMenu from './components/BurgerMenu'
@@ -13,10 +13,10 @@ import Messagerie from './components/Messagerie'
 function App() {
   const [character, setCharacter] = useState([])
   const [selectedCharacter, setSelectedCharacter] = useState({
-    name: 'Jaba',
+    name: 'Jabba',
     homeworld: 'Tatooine',
-    cybernetics: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. ',
-    image: jaba,
+    cybernetics: 'Toi aussi tu veux rencontrer les cybers de ta region? Passe donc du côté obscure de la force !',
+    image: jabba,
   })
 
   const [filterGender, setFilterGender] = useState('')
