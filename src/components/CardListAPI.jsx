@@ -3,7 +3,7 @@ import '../styles/CardListApi.css'
 
 function CardListAPI({ filteredCharacters, onCharacterSelect }) {
   return (
-    <div className="carte-liste">
+    <div className="carte-liste cards">
       {filteredCharacters.map(character => (
         <CarteCaroussel
           key={character.name}

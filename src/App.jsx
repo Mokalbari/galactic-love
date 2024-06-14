@@ -1,5 +1,5 @@
 import './App.css'
-
+import jaba from './assets/Jabba-The-Hutt.png'
 import Header from './components/Header'
 import CardListAPI from './components/CardListAPI'
 import BurgerMenu from './components/BurgerMenu'
@@ -12,11 +12,10 @@ import Loading from "./components/Loading"
 function App() {
   const [character, setCharacter] = useState([])
   const [selectedCharacter, setSelectedCharacter] = useState({
-    name: 'Default Name',
-    homeworld: 'Default ',
-    cybernetics: 'Default ',
-    image:
-      'https://w7.pngwing.com/pngs/116/192/png-transparent-jabba-the-hutt-c-3po-sideshow-collectibles-youtube-star-wars-youtube-war-villain-16-scale-modeling-thumbnail.png',
+    name: 'Jaba',
+    homeworld: 'Tatooine',
+    cybernetics: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. ',
+    image: jaba,
   })
 
   const [filterGender, setFilterGender] = useState('')
@@ -83,27 +82,29 @@ function App() {
 
   return (
     <>
-      <Header />
-      <Menu
-        filteredCharacters={filteredCharacters}
-        setFilterGender={setFilterGender}
-        setFilterSpecies={setFilterSpecies}
-        setFilterHomeworld={setFilterHomeworld}
-        setFilterCybernetics={setFilterCybernetics}
-        setFilterAffiliations={setFilterAffiliations}
-      />
-      {selectedCharacter && (
-        <Hero
-          name={selectedCharacter.name}
-          homeworld={selectedCharacter.homeworld}
-          cybernetics={selectedCharacter.cybernetics}
-          image={selectedCharacter.image}
+      <div className="grid">
+        <Header />
+        <Menu
+          filteredCharacters={filteredCharacters}
+          setFilterGender={setFilterGender}
+          setFilterSpecies={setFilterSpecies}
+          setFilterHomeworld={setFilterHomeworld}
+          setFilterCybernetics={setFilterCybernetics}
+          setFilterAffiliations={setFilterAffiliations}
         />
-      )}
-      <CardListAPI
-        filteredCharacters={filteredCharacters}
-        onCharacterSelect={handleCharacterSelect}
-      />
+        {selectedCharacter && (
+          <Hero
+            name={selectedCharacter.name}
+            homeworld={selectedCharacter.homeworld}
+            cybernetics={selectedCharacter.cybernetics}
+            image={selectedCharacter.image}
+          />
+        )}
+        <CardListAPI
+          filteredCharacters={filteredCharacters}
+          onCharacterSelect={handleCharacterSelect}
+        />
+      </div>
     </>
   )
 }
