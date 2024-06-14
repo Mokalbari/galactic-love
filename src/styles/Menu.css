@@ -1,50 +1,142 @@
 :root {
-    margin: 0;
-    padding: 0;
-    --colorGreen:#ccb361 ;
-    --colorOrange:#e99f6f ;
-    --colorPink: #9b4c8f;
-    --colorPinkDarker: #89454e ;
-    --colorMiddleBlue: #114891;
-    --colorBrown: #33240d;
-    --colorWhite: #fcfeff;
-    --colorBlueDark: #262c8b;
-    --colorBlueLight:#508dd7 ;
-    --colorOrangeDark: #b36f35;
+  margin: 0;
+  padding: 0;
+  --colorgreen: #ccb361;
+  --colororange: #e99f6f;
+  --colorpink: #9b4c8f;
+  --colorpinkdarker: #89454e;
+  --colormiddleblue: #114891;
+  --colorbrown: #33240d;
+  --colorwhite: #fcfeff;
+  --colorbluedark: #262c8b;
+  --colorbluelight: #508dd7;
+  --colororangedark: #b36f35;
+  --dark-color: #191f1d;
+  --mid-dark: #555a57;
+  --light-color: #ece0c8;
+  --mid-light: #949993;
+  --fonttitle: "Orbitron", sans-serif;
+  --fonttext: "Montserrat", sans-serif;
+  --noise: url(https://i.gyazo.com/a26366e538851a5c569ff648e99b7fd4.png);
+  --gif-texture: url(https://64.media.tumblr.com/da60c13b478dda09ab90c27e880983b8/tumblr_nd4pwdPKdc1tun3l0o1_1280.gifv);
 }
 
 .menu {
-    width: 25vh;
-    height: 100vh;
-    background-color: var(--colorMiddleBlue);
-    border-top-right-radius: 3vh;
-    box-shadow: grey 2px 2px 2px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap:5vh;
-    
+  grid-area: menu;
+  /* position: fixed; */
+}
 
-    h2 {
-        font-size: 4vh;
-        color : white;
+.menu {
+  padding: 1rem;
+  max-width: 15vw;
+  height: 100vh;
+  background-color: #949993;
+  border-radius: 0 1rem 1rem 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-image: linear-gradient(
+    150deg,
+    var(--dark-color) 60.2%,
+    var(--mid-dark) 60.28%,
+    var(--mid-dark) 60.7%,
+    var(--dark-color) 60.78%,
+    var(--dark-color) 61.4%,
+    var(--mid-dark) 61.48%,
+    var(--mid-dark) 62.6%,
+    var(--dark-color) 62.68%,
+    var(--dark-color) 63.4%,
+    var(--mid-dark) 63.48%,
+    var(--mid-dark) 64.6%,
+    var(--dark-color) 64.68%,
+    var(--dark-color) 65.4%,
+    var(--mid-dark) 65.48%,
+    var(--mid-dark) 67.4%,
+    var(--dark-color) 67.48%,
+    var(--dark-color) 68.4%,
+    var(--mid-dark) 68.48%,
+    var(--mid-dark) 71.4%,
+    var(--dark-color) 71.48%,
+    var(--dark-color) 72.4%,
+    var(--mid-dark) 72.48%,
+    var(--mid-dark) 76.4%,
+    var(--dark-color) 76.48%,
+    var(--dark-color) 77.4%,
+    var(--mid-dark) 77.48%,
+    var(--mid-dark) 81.4%,
+    var(--dark-color) 81.48%,
+    var(--dark-color) 82.4%,
+    var(--mid-dark) 82.48%,
+    var(--mid-dark) 87.4%,
+    var(--dark-color) 87.48%
+  );
+
+  label {
+    color: var(--light-color);
+  }
+
+  h2 {
+    font-family: var(--fonttitle);
+    margin-block: 1em;
+    font-size: 4vh;
+  }
+
+  select {
+    width: 100%;
+    background-image: linear-gradient(
+      to right,
+      var(--light-color),
+      var(--light-color)
+    );
+  }
+
+  input {
+    color: white;
+  }
+
+  .gender {
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .filters-selector {
+    padding: 2vh;
+
+    .cform {
+      max-width: 100%;
+      border-radius: 1vh;
     }
+  }
 
-    .filters-selector{
-       padding:2vh;
-
-       .cform {
-        width: 20vh;
-        border-radius: 1vh;
-       }
-
-    }
-
+  h3 {
+    color: white;
+    margin-block: 1rem;
+  }
 }
 
 @media screen and (max-width: 750px) {
-    .menu{
-        display:none;
-    }
+  .menu {
+    display: none;
+  }
+}
+.reset {
+  margin-top: 1rem;
+  padding: 1em;
+  color: var(--dark-color);
+  font-weight: 900;
+  position: relative;
 
+  &:hover {
+    border: none;
+    cursor: pointer;
+    background-image: linear-gradient(
+      to right,
+      var(--light-color),
+      var(--light-color)
+    );
+    scale: 1.1;
+    box-shadow: 16px 16px var(--shadow);
+    transition: all 0.2s;
+  }
 }
