@@ -2,6 +2,7 @@
   --fonttitle: "Orbitron", sans-serif;
   --fonttext: "Montserrat", sans-serif;
 }
+
 .header {
   font-family: var(--fonttitle);
   font-size: 3rem;
