@@ -71,7 +71,10 @@
   }
 }
 .messagerie__small {
-  font-size: 1rem;
+  p {
+    margin-top: -1.3rem;
+  }
+  font-size: 1.5rem;
   font-family: "Orbitron";
   background-color: #191f1d;
   background-image: var(--noise);

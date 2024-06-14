@@ -9,13 +9,15 @@ import { useEffect, useState } from 'react'
 import { element } from 'prop-types'
 import Loading from './components/Loading'
 import Messagerie from './components/Messagerie'
+import audio from './assets/star_wars_cantina_2.mp3'
 
 function App() {
   const [character, setCharacter] = useState([])
   const [selectedCharacter, setSelectedCharacter] = useState({
     name: 'Jabba',
     homeworld: 'Tatooine',
-    cybernetics: 'Toi aussi tu veux rencontrer les cybers de ta region? Passe donc du côté obscure de la force !',
+    cybernetics:
+      'Toi aussi tu veux rencontrer les cybers de ta region? Passe donc du côté obscure de la force !',
     image: jabba,
   })
 
@@ -86,6 +88,7 @@ function App() {
         <Header />
         <Messagerie selectedCharacter={selectedCharacter} />
         <Menu
+          audio={audio}
           filteredCharacters={filteredCharacters}
           setFilterGender={setFilterGender}
           setFilterSpecies={setFilterSpecies}
