@@ -1,5 +1,12 @@
-.carte-liste{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+.carte-liste {
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr); */
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  margin-block: 8vh;
+}
+
+.cards {
+  grid-area: cards;
 }
