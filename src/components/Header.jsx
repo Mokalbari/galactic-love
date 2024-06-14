@@ -7,7 +7,7 @@ function Header() {
   }
   return (
     <header className="header">
-      <div className="header-content container">
+      <div className="header-content">
         <h1 className="header__title">La Cantina de Jaba</h1>
         {/* <div
           className="burger-icon"

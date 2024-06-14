@@ -32,8 +32,8 @@
   display: grid;
   grid-template-areas: "menu header" "menu hero" "menu cards";
   grid-template-rows: 40vh 40vh auto;
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
 }
 
 body {

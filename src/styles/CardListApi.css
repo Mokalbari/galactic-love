@@ -1,6 +1,8 @@
 .carte-liste {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr); */
+  display: flex;
+  flex-flow: wrap;
 }
 
 .cards {

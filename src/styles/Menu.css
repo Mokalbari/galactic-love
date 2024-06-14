@@ -19,7 +19,7 @@
 
 .menu {
   grid-area: menu;
-  position: fixed;
+  /* position: fixed; */
 }
 
 .menu {

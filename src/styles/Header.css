@@ -1,5 +1,9 @@
+:root {
+  --fonttitle: "Orbitron", sans-serif;
+  --fonttext: "Montserrat", sans-serif;
+}
 .header {
-  margin-block: 5vh;
+  font-family: var(--fonttitle);
   font-size: 3rem;
-  outline: 1px solid red;
+  margin: 10vh auto;
 }
