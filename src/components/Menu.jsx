@@ -36,7 +36,7 @@ function Menu({
 
   return (
     <div className="menu flex-column">
-      <h2>Menu</h2>
+      <h2 contenteditable spellcheck="false">Open</h2>
       <section className="filters-selector">
         <div className="cform gender flex-row">
           <div className="flex-row">

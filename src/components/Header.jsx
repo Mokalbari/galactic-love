@@ -8,7 +8,7 @@ function Header() {
   return (
     <header className="header">
       <div className="header-content">
-        <h1 className="header__title">La Cantina de Jaba</h1>
+        <div class="logo"><b><span>La</span> <span>Can</span>tina <span>de </span>Ja<span>ba </span></b></div>
         {/* <div
           className="burger-icon"
           onClick={toggleMenu}
